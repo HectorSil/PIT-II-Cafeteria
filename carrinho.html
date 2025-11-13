@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+<body>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" id="menuPedidos">Cardápio</a></li>
+            <li><a href="" id="menuCarrinho">Carrinho</a></li>
+            <li><a href="#" id="menuRedesSociais">Redes Sociais</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <div id="homeScreen" class="screen">
+            <h1>Bem-vindo à Cafeteria</h1>
+            <button id="loginBtn">Fazer Login</button>
+        </div>
+
+        <div id="menuScreen" class="screen hidden">
+            <h2>Menu de Pedidos</h2>
+            <div class="product" id="coffee">
+                <img src="https://via.placeholder.com/150/FFB6C1/000000?text=Café" alt="Café">
+                <h3>Café</h3>
+                <p>Delicioso café com grãos selecionados.</p>
+                <input type="number" id="coffeeQuantity" value="1" min="1">
+                <button onclick="addToCart('Café', 10)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="cake">
+                <img src="https://via.placeholder.com/150/FFD700/000000?text=Bolo" alt="Bolo">
+                <h3>Bolo de Chocolate</h3>
+                <p>Bolo fofinho com cobertura de chocolate.</p>
+                <input type="number" id="cakeQuantity" value="1" min="1">
+                <button onclick="addToCart('Bolo de Chocolate', 15)">Adicionar ao Carrinho</button>
+            </div>
+            <button id="viewCartBtn">Ver Carrinho</button>
+        </div>
+
+        <div id="cartScreen" class="screen hidden">
+            <h2>Seu Carrinho</h2>
+            <div id="cartItems"></div>
+            <p><strong>Total: R$ <span id="totalPrice">0</span></strong></p>
+            <label for="paymentMethod">Método de pagamento:</label>
+            <select id="paymentMethod">
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+            </select>
+            <label for="address">Endereço de entrega:</label>
+            <input type="text" id="address" placeholder="Digite seu endereço">
+            <button onclick="confirmPurchase()">Confirmar Compra</button>
+        </div>
+    </div>
+
+    <script src="carrinho.js"></script>
+</body>
+</html>

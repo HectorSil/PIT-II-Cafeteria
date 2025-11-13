@@ -1,0 +1,109 @@
+/* Estilos básicos para a página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #351a1a; /* Fundo de tela */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Menu Lateral */
+.sidebar {
+    width: 150px;
+    background-color: #2b2020cc;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    box-shadow: 3px 0px 10px #00000080;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    margin: 10px 0;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+    background: #351a1a;
+    border-radius: 10px;
+}
+
+/* Tela de Pedidos */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+#menuScreen .product {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menuScreen img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* Carrinho */
+#cartScreen {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#cartItems {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Escondendo elementos */
+.hidden {
+    display: none;
+}
+
+input[type="text"], select, input[type="number"] {
+    padding: 8px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
