@@ -1,0 +1,116 @@
+/* Estilos básicos para a página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #351a1a;
+    
+}
+.titulo1 {
+    margin-left: 30%;
+    font-size: xx-large;
+    color: #ffef95;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Menu Lateral */
+.sidebar {
+    width: 150px;
+    background-color: #2b2020cc;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    box-shadow: 3px 0px 10px #00000080;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    margin: 10px 0;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Tela do Cardápio */
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+#menuScreen .product {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ffef95;
+    border-radius: 15px;
+    background-color: #ffef95;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menuScreen img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+#fotocookie {
+    height: 120px;
+}
+
+/* Carrinho */
+#cartScreen {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#cartItems {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #351a1a;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgba(43, 32, 32, 0.8);
+}
+
+/* Escondendo elementos */
+.hidden {
+    display: none;
+}
+
+input[type="text"], select, input[type="number"] {
+    padding: 8px;
+    margin: 10px 0;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

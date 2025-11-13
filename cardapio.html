@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Cafeteria</title>
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#" id="menuPedidos">Cardápio</a></li>
+            <li><a href="" id="menuCarrinho">Carrinho</a></li>
+            <li><a href="#" id="menuRedesSociais">Redes Sociais</a></li>
+            
+        </ul>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <div id="menuScreen" class="screen active">
+            <h2 class="titulo1">Café Realeza</h2>
+            <div class="product" id="coffeeExpresso">
+                <img src="img/café duplo.jpg"class="foto" alt="Café Expresso">
+                <h3>Café Expresso</h3>
+                <p>O café clássico, forte e saboroso, ideal para os amantes de café puro.</p>
+                <input type="number" id="coffeeExpressoQuantity" value="1" min="1">
+                <button onclick="addToCart('Café Expresso', 8)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="coffeeDuplo">
+                <img src="img/café duplo.jpg"class="foto" alt="Café Duplo">
+                <h3>Café Duplo</h3>
+                <p>Dois cafés expresso em uma única xícara. Ideal para quem quer mais energia.</p>
+                <input type="number" id="coffeeDuploQuantity" value="1" min="1">
+                <button onclick="addToCart('Café Duplo', 12)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="brownie">
+                <img src="img/brownie.jpg"class="foto" alt="Brownie">
+                <h3>Brownie</h3>
+                <p>Delicioso brownie de chocolate, fofinho por dentro e crocante por fora.</p>
+                <input type="number" id="brownieQuantity" value="1" min="1">
+                <button onclick="addToCart('Brownie', 10)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="capuccino">
+                <img src="img/frapuccino.jpg"class="foto" alt="Capuccino">
+                <h3>Frapuccino</h3>
+                <p>Café com leite cremoso e uma camada de espuma, perfeito para o seu dia.</p>
+                <input type="number" id="capuccinoQuantity" value="1" min="1">
+                <button onclick="addToCart('Capuccino', 14)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="pao">
+                <img src="img/pao.jpg"class="foto" alt="Pão">
+                <h3>Pão</h3>
+                <p>Pão fresquinho, ideal para acompanhar seu café da manhã.</p>
+                <input type="number" id="paoQuantity" value="1" min="1">
+                <button onclick="addToCart('Pão', 5)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product" id="cookies">
+                <img src="img/cookie.jpg"id="fotocookie" alt="Cookies">
+                <h3>Cookies</h3>
+                <p>Cookies crocantes com pedaços de chocolate. Perfeitos para um lanche.</p>
+                <input type="number" id="cookiesQuantity" value="1" min="1">
+                <button onclick="addToCart('Cookies', 6)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div id="cartScreen" class="screen hidden">
+            <h2>Seu Carrinho</h2>
+            <div id="cartItems"></div>
+            <p><strong>Total: R$ <span id="totalPrice">0</span></strong></p>
+            <button onclick="confirmPurchase()">Enviar para o Carrinho</button>
+        </div>
+        
+    </div>
+
+    <script src="cardapio.js"></script>
+</body>
+</html>
